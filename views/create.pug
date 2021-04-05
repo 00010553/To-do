@@ -8,13 +8,25 @@ block content
       p.error Error! Try again Bro!
 
     if success 
-      p.success List is created!
+      p.success Todo is created!
     
-    form.create-form(action="/create" method='POST')
-      label.create-text Title  
-      input.create-input(type="text" name="title")
+    if deleted
+      p.success Deleted
 
-      label.create-text Description 
-      textarea.create-input(type="text" name="desc" rows="8") 
-      
-      button.create-btn Create
+  .container 
+  form.form(action='/add' method='POST')
+    input.input(type='text' placeholder='Add your todo description here' name='todo')
+    button.btn Add  
+
+
+  .todos
+    if todos
+      each todo in todos
+        p.todo 
+          if todo.done
+            a.done(href=`/${ todo.id }/update`) #{ todo.description }
+          else 
+            a.undone(href=`/${ todo.id }/update`) #{ todo.description }
+          a.delete(href=`/${ todo.id }/delete`) Delete
+    else
+      p.todo No any todo available

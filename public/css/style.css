@@ -80,86 +80,99 @@ a:hover {
     font-size: 40px;
     padding: 20px 0;
 }
+  
 
-.create-text{
-    font-size: 20px;
-    color: #3b3534;
-}
-
-.create-form{
+.form {
     max-width: 60%;
-}
-
-.create-input {
-    display: block;
     width: 100%;
-    padding: 10px 0;
-    margin-bottom: 20px;
-    font-size: 20px;
-    border: 1px solid #cabbb9;
-    outline: none;
-    resize: none;
-    border-radius: 3px;
-}
-
-.create-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .input {
     display: inline-block;
-    background-color: #3b3534;
-    color: #cabbb9;
-    font-size: 20px;
-    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 80%;
+    border: 1px solid #ccc;
+    font-family: inherit;
+  }
+  
+  .btn {
+    display: inline-block;
     padding: 10px 20px;
-    border-radius: 3px;
+    font-size: 1.5rem;
+    width: 18%;
+    border: none;
+    background: #3b3534;
+    color: #fff;
     transition: 0.5s;
-}
+  }
 
-.create-btn:hover {
-    color: #3b3534;
-    background: #ad9c99;
-}
-
-/* Lists Page */
-
-.list-wrapper{
+  .btn:hover {
+      background: #ad9c99;
+      color: #3b3534;
+  }
+  
+  .todos {
     max-width: 60%;
+    margin-top: 25px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .todo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px 10px;
-    border-bottom: 2px solid #ad9c99;
-}
-
-.list{
-    color: #3b3534;
-    font-size: 20px;
-}
-
-.delete{
-    display: inline-block;
-    padding: 5px 5px;
-    background: rgb(219, 63, 63);
-    color: #fff;
-}
-
-.delete:hover{
-    background: rgb(139, 32, 32);
-    color: #fff;
-}
-
-.error {
-    display: inline-block;
     padding: 10px;
-    background: red;
-    font-size: 30px;
-    color: #fff;
-    border-radius: 3px;
-}
-
-.success {
-    display: inline-block;
+    font-size: 1.5rem;
+    border-bottom: 1px dotted #ccc;
+  }
+  
+  .todo:last-child {
+    border-bottom: none;
+  }
+  
+  
+  .todo:hover {
+    background: #eee;
+  }
+  
+  .error,
+  .success {
+    text-align: center;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
     padding: 10px;
-    background: green;
-    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .error {
+    color: red;
+    border-color: red;
+  }
+  
+  .success {
+    color: green;
+    border-color: green;
+  }
+  
+  .delete {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    background: tomato;
     color: #fff;
-    border-radius: 3px;
-}
+  }
+  
+  .done, 
+  .undone {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .done {
+    text-decoration: line-through;
+  }
+
