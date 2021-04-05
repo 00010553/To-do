@@ -115,7 +115,15 @@ app.get('/:id/delete', (req, res) => {
 
 //   API ////////////////////////////////
 
-
+app.get('/api/v1/todos', (req, res) => {
+	fs.readFile('./data/todos.json', (err, data) => {
+		if (err) throw err
+	
+		const todos = JSON.parse(data)
+	
+		res.json(todos)
+	  })
+})
 
 //   PORT ///////////////////////////////
 
