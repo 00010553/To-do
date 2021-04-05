@@ -6,7 +6,7 @@ To run this web app, you must follow the steps below:
 
 1. Clone this repository:
 ```bash
-git clone [https://github.com/00010553/To-do.git]
+git clone https://github.com/00010553/To-do.git
 ```
 
 2. Open project folder
@@ -29,7 +29,7 @@ node app
 - pug.js
 
 ### Github repository link
-[https://github.com/00010553/To-do.git]
+https://github.com/00010553/To-do.git
 
 ### Web App link on Glitch
-[https://sneaky-illustrious-archaeology.glitch.me]
+https://sneaky-illustrious-archaeology.glitch.me
