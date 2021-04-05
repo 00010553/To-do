@@ -8,7 +8,7 @@ app.set('view engine', 'pug')
 app.use('/static', express.static('public'))
 app.use(express.urlencoded({ extended: false }))
 
-// localhost:8080
+// localhost:8080 ////////////////////////////
 
 app.get('/', (req, res) => {
 	fs.readFile('./data/todos.json', (err, data) => {
@@ -112,6 +112,10 @@ app.get('/:id/delete', (req, res) => {
 	})
 	  
   })
+
+//   API ////////////////////////////////
+
+
 
 //   PORT ///////////////////////////////
 

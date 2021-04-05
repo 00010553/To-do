@@ -2,7 +2,7 @@ extends layout.pug
 
 block content 
   .container 
-    h1.create-heading Create List 
+    h1.create-heading Create To Do
 
     if error
       p.error Error! Try again Bro!
@@ -11,15 +11,15 @@ block content
       p.success Todo is created!
     
     if deleted
-      p.success Deleted
+      p.success Deleted 
 
-  .container 
-  form.form(action='/add' method='POST')
-    input.input(type='text' placeholder='Add your todo description here' name='todo')
-    button.btn Add  
+      
+    form.form(action='/add' method='POST')
+      input.input(type='text' placeholder='Add your todo description here' name='todo')
+      button.btn Add  
 
 
-  .todos
+  .container.todos
     if todos
       each todo in todos
         p.todo 

@@ -41,7 +41,7 @@ a:hover {
 
 /* Index Page */
 
-.container {
+.index-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px;
@@ -75,7 +75,17 @@ a:hover {
 
 /* Create Page */
 
+.container {
+    display: flex;
+    justify-content: center ;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 .create-heading {
+    text-align: center;
     color: #3b3534;
     font-size: 40px;
     padding: 20px 0;
@@ -83,8 +93,8 @@ a:hover {
   
 
 .form {
-    max-width: 60%;
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
   }
@@ -95,7 +105,7 @@ a:hover {
     font-size: 1.5rem;
     width: 80%;
     border: 1px solid #ccc;
-    font-family: inherit;
+    border-radius: 3px;
   }
   
   .btn {
@@ -106,6 +116,7 @@ a:hover {
     border: none;
     background: #3b3534;
     color: #fff;
+    border-radius: 3px;
     transition: 0.5s;
   }
 
@@ -117,8 +128,10 @@ a:hover {
   .todos {
     max-width: 60%;
     margin-top: 25px;
-    border: 1px solid #ccc;
+    border: 1px solid #80716f;
+    border-radius: 3px;
     padding: 10px;
+    margin-bottom: 30px;
   }
   
   .todo {
@@ -127,16 +140,17 @@ a:hover {
     align-items: center;
     padding: 10px;
     font-size: 1.5rem;
-    border-bottom: 1px dotted #ccc;
+    border-bottom: 3px solid #80716f;
+    border-radius: 3px;
+    transition: 0.5s;
   }
   
   .todo:last-child {
     border-bottom: none;
   }
   
-  
   .todo:hover {
-    background: #eee;
+    background: #f2f3f5;
   }
   
   .error,
@@ -149,21 +163,29 @@ a:hover {
   }
   
   .error {
-    color: red;
-    border-color: red;
+    color: white;
+    background: rgb(196, 14, 14);
+    border-radius: 3px;
   }
   
   .success {
-    color: green;
-    border-color: green;
+    color: white;
+    background: green;
+    border-radius: 3px;
   }
   
   .delete {
     text-decoration: none;
     font-size: 1rem;
     padding: 5px 10px;
-    background: tomato;
+    background: red;
     color: #fff;
+    border-radius: 3px;
+  }
+
+  .delete:hover {
+      background: #db2d27;
+      color: #fff;
   }
   
   .done, 
